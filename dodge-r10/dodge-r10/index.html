@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Beauty of Flowers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/lib/p5.js" type="text/javascript"></script>
+  </head>
+    <h1>Design Your Own Flower</h1>
+    <h2>Use the sliders to change the color of the petals</h2>
+  <body>
+<!-- <div class="img-contianer">
+  <img width="500px"src="image\stars.jpg" alt="stars">
+</div> -->
+<div class="sliders">
+  <input id="slider-r" type="range" value="100" min="0" max="255"/>
+  <input id="slider-g" type="range" value="100" min="0" max="255" />
+  <input id="slider-b" type="range" value="100" min="0" max="255" />
+</div>
+<div class="buttons">
+  <button onclick="changeColor()" type="button">Change Center Color!</button>
+</div>
+    <!-- Add HTML Elements -->
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>

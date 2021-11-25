@@ -1,0 +1,52 @@
+html, body{
+  height: 100%
+}
+
+/* can put whatever thing that has margins here if want to remove */
+/* each tag has its own box make random color to see if want to manipulate */
+body, p, h3{
+  margin: 0;
+}
+
+p{
+  /* first 2 make you see box model */
+  /* background-color: green; */
+  /* color: red; */
+}
+
+/* default try to fill margin 100% */
+.box{
+  font-style: italic;
+  background-color: lightgray;
+  /* can also use percent value for 2 below */
+  width: 100px;
+  height: 150px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+
+  margin: 30px;
+  padding: 20px;
+}
+
+/* can use id and class together next to each other no comma */
+/* #special-box{ */
+  /* background-color: pink; */
+/* } */
+
+
+/* visibility changes well what it says */
+.special-box{
+  /* depending on positon and top left or right or bottom may stay fixed place or move with scroll */
+  position: absolute;
+  left: 200px;
+  top: 200px;
+
+  background-color: pink;
+  width: 120px;
+  height: 150px;
+
+  margin: 30px;
+  padding: 20px;
+}
