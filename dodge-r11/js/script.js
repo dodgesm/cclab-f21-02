@@ -12,7 +12,6 @@ function setup() {
   sliderR = document.getElementById('slider-r');
   sliderG = document.getElementById("slider-g");
   sliderB = document.getElementById("slider-b");
-  sliderG = document.getElementById("slider-g");
 }
 
 function draw() {
@@ -20,7 +19,6 @@ function draw() {
 
   cam.loadPixels();
   img.loadPixels();
-  // let g = sliderG.value;
   let gridSize = 10;
 
   noStroke();
