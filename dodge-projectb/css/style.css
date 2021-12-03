@@ -1,0 +1,154 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  left: 320px;
+  top: 220px;
+}
+
+h1 {
+  position: absolute;
+  left:200px;
+}
+
+#front{
+  background-color: rgba(13,154,137,255);
+  font-size: 30px;
+  color:rgba(204,232,243,255);
+}
+
+.buttons{
+  position: absolute;
+  left: 460px;
+  top: 170px;
+}
+
+h3 {
+  position: absolute;
+  left: 1000px;
+  top: 200px;
+}
+
+/* page1.html */
+#page1{
+  background-color: rgb(223,118,89);
+  font-size: 20px;
+  color:rgb(237,232,232);
+}
+
+#Uli{
+  position: absolute;
+}
+#ulisButton{
+  position: absolute;
+  top: 35px;
+  left: 120px;
+}
+#uliV{
+  position:absolute;
+  top: 70px;
+  left: 5px;
+}
+
+#uliD{
+  position: absolute;
+  left:5px;
+  top: 380px;
+}
+
+#uliI{
+  position: absolute;
+  left: 600px;
+  top: 70px;
+}
+
+#Ili{
+  position: absolute;
+  top: 500px;
+}
+
+#iliButton{
+  position: absolute;
+  left:90px;
+  top:535px;
+}
+
+#iliV{
+  position: absolute;
+  top: 600px;
+  left: 5px;
+}
+
+#iliI{
+  position: absolute;
+  left:600px;
+  top: 600px;
+}
+
+#iliD{
+  position: absolute;
+  left:5px;
+  top:920px;
+}
+
+#Pahu{
+  position: absolute;
+  top: 1000px;
+}
+
+#pahuButton{
+  position: absolute;
+  top:1035px;
+  left:80px;
+}
+
+#pahuV{
+  position: absolute;
+  top: 1060px;
+  left:5px;
+}
+
+#pahuI{
+  position: absolute;
+  top: 1060px;
+  left:600px;
+}
+
+#pahuD{
+  position: absolute;
+  top: 1390px;
+  left:5px;
+}
+
+#Ipu{
+  position: absolute;
+  top: 1500px;
+}
+
+#ipuButton{
+  position: absolute;
+  top: 1535px;
+  left: 70px;
+}
+
+#ipuV{
+  position: absolute;
+  top: 1570px;
+  left:5px;
+}
+
+#ipuI{
+  position: absolute;
+  top: 1570px;
+  left: 600px;
+}
+
+#ipuD{
+  position: absolute;
+  top: 1880px;
+  left:5px;
+}
