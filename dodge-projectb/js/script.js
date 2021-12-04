@@ -16,6 +16,9 @@ let e;
 let uli;
 let m;
 let u;
+//Dancers
+let d;
+let h;
 
 function preload() {
   img = loadImage("assets/poster.PNG");
@@ -40,11 +43,22 @@ function setup() {
   g = new Gourd ();
   //uli
   m = new Shaker ();
+  //dancer
+  d = new Dancer();
+  h = new Hips();
 }
 
 function draw() {
   background(img);
-  // need movement to disappear
+
+  //dancer
+  // d.update();
+  d.display();
+  h.display();
+  h.update();
+
+
+  // need movement to disappear after sound
   if (ili.currentTime()>0){
     stone.display();
     stone.update();
@@ -80,10 +94,8 @@ function playIli(){
   if (!ili.isPlaying()){
     ili.play();
     ili.setVolume(0.5);
-    button.html("pause 'ili'ili");
   } else{
     ili.pause();
-    button.html("play 'ili'ili");
   }
 }
 
@@ -105,8 +117,7 @@ class Rock{
     push();
     noStroke();
     fill("black");
-    ellipse(this.x, this.y, this.rad * 3, this.rad * 2); // ellipse takes a diameter!
-
+    ellipse(this.x, this.y, this.rad * 3, this.rad * 2);
     pop();
   }
 }
@@ -117,15 +128,13 @@ function playPahu(){
   if (!pahu.isPlaying()){
     pahu.play();
     pahu.setVolume(0.5);
-    button.html("pause pahu");
   } else{
     pahu.pause();
-    button.html("play pahu");
   }
 }
 
 function drawPahu(){
-  push();
+push();
 let level = amplitude.getLevel();
 let dia = map(level, 0.0, 1.0, 0, 500);
 
@@ -153,10 +162,8 @@ function playIpu(){
   if (!ipu.isPlaying()){
     ipu.play();
     ipu.setVolume(0.5);
-    button.html("pause ipu");
   } else{
     ipu.pause();
-    button.html("play ipu");
   }
 }
 
@@ -192,10 +199,8 @@ function playUli(){
   if (!uli.isPlaying()){
     uli.play();
     uli.setVolume(0.5);
-    button.html("pause uli uli");
   } else{
     uli.pause();
-    button.html("play uli uli");
   }
 }
 
@@ -235,4 +240,150 @@ display(){
 //for finding points
 function mousePressed(){
   console.log(mouseX, mouseY);
+}
+
+class Dancer{
+  constructor(x,y){
+    this.x = x;
+    this.y = y;
+    //head
+    this.dai = 60;
+    //legs
+    this.dai2 = 30;
+    this.dai3 = 70;
+    //body color
+    this.r = 254;
+    this.g = 150;
+    this.b = 88;
+    //leaves
+    this.r1 = 115;
+    this.g1 = 229;
+    this.b1 = 21;
+    //dress
+    this.r2 = 250;
+    this.g2 = 45;
+    this.b2 = 51;
+    //bottoms
+    // this.color = "green";
+    //kane top
+    this.r3=108;
+    this.g3=80;
+    this.b3=153;
+    //movements
+    this.xSpd = random(-3, 3);
+    this.ySpd = random(-3, 3);
+  }
+  move(){
+    this.x += this.xSpd;
+    this.y += this.ySpd;
+  }
+  sway() {
+  if (this.x < 410 || this.x > 553) {
+    this.xSpd *= -1;
+  }
+  if (this.y < 422 || this.y > 406) {
+    this.ySpd *= -1;
+  }
+}
+  update(){
+    this.move();
+    this.sway();
+  }
+  display(){
+    push();
+    this.drawWahine();
+    // this.drawHips();
+    this.drawKane();
+    pop();
+  }
+  drawWahine(){
+    push();
+    noStroke();
+    //arms
+    push();
+    ellipseMode(CORNER);
+    fill(this.r,this.g,this.b);
+    ellipse(495,319, this.dai2, this.dai3);
+    ellipse(410,319, this.dai2, this.dai3);
+    pop();
+    //top
+    fill(this.r2, this.g2, this.b2);
+    rect(427, 310, 80, 70);
+    //legs
+    fill(this.r,this.g,this.b);
+    ellipse(455, 427, this.dai2, this.dai3);
+    ellipse(480,427, this.dai2, this.dai3);
+    //skirt
+    // fill(this.r2, this.g2, this.b2);
+    // quad(432,379,500,370,523,431,412,431);
+    //head
+    fill(this.r,this.g,this.b);
+    ellipse(466, 288, this.dai, this.dai);
+    fill(72,202,0);
+    ellipse(466,267, 70,20);
+    pop();
+  }
+  // drawHips(){
+  //   noStroke();
+  //   fill(this.r2, this.g2, this.b2);
+  //   quad(432,379,500,379,523,431,412,431);
+  // }
+  drawKane(){
+    //arms
+    push();
+    fill(this.r,this.g,this.b);
+    ellipseMode(CORNER);
+    fill(this.r,this.g,this.b);
+    ellipse(160,319, this.dai2, this.dai3);
+    ellipse(90,319, this.dai2, this.dai3);
+    pop();
+    //top
+    fill(this.r3, this.g3, this.b3);
+    rect(100, 310, 80, 70);
+    // head
+    fill(this.r,this.g,this.b);
+    ellipse(138, 288, this.dai, this.dai);
+    //legs
+    ellipse(121, 427, this.dai2, this.dai3);
+    ellipse(156,427, this.dai2, this.dai3);
+
+  }
+}
+
+class Hips{
+  constructor(x,y){
+    this.x=x;
+    this.y=y;
+    this.xSpd = random(-3, 3);
+    this.ySpd = random(-3, 3);
+    //red
+    this.r2 = 250;
+    this.g2 = 45;
+    this.b2 = 51;
+    //green
+    this.color = "green";
+  }
+  move(){
+    this.x += this.xSpd;
+    this.y += this.ySpd;
+  }
+  sway() {
+  if (this.x < 410 || this.x > 553) {
+    this.xSpd *= -1;
+  }
+  if (this.y < 422 || this.y > 406) {
+    this.ySpd *= -1;
+  }
+}
+  update(){
+    this.move();
+    this.sway();
+  }
+  display(){
+      noStroke();
+      fill(this.r2, this.g2, this.b2);
+      quad(432,379,500,379,523,431,412,431);
+      fill(this.color);
+      quad(114,379,166,379,190,431,94,431);
+  }
 }

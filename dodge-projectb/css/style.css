@@ -8,6 +8,9 @@ canvas {
   position: absolute;
   left: 320px;
   top: 220px;
+  border-style:solid;
+  border-width: 10px;
+  border-color: white;
 }
 
 h1 {
@@ -19,18 +22,29 @@ h1 {
   background-color: rgba(13,154,137,255);
   font-size: 30px;
   color:rgba(204,232,243,255);
+  text-shadow: 1px 0 green, 0 1px green, 1px 0 green, 0 -1px green;
 }
+
 
 .buttons{
   position: absolute;
   left: 460px;
   top: 170px;
+  border-color: rgb(255,255,255);
 }
 
 h3 {
   position: absolute;
   left: 1000px;
   top: 200px;
+}
+
+.list{
+  position: absolute;
+  margin-right: 1000px;
+  top: 200px;
+  font-size: 25px;
+  text-shadow: 1px 0 green, 0 1px green, 1px 0 green, 0 -1px green;
 }
 
 /* page1.html */
@@ -40,115 +54,135 @@ h3 {
   color:rgb(237,232,232);
 }
 
+.box{
+  position:fixed;
+  left: 1080px;
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+  font-size: 30px;
+}
+
 #Uli{
   position: absolute;
+  left: 530px;
 }
 #ulisButton{
   position: absolute;
-  top: 35px;
-  left: 120px;
+  top: 32px;
+  left: 640px;
 }
 #uliV{
   position:absolute;
   top: 70px;
-  left: 5px;
+  left: 70px;
 }
 
 #uliD{
   position: absolute;
-  left:5px;
-  top: 380px;
+  right: 100px;
+  top: 350px;
+  margin: 50px;
 }
 
 #uliI{
   position: absolute;
-  left: 600px;
+  left: 680px;
   top: 70px;
 }
 
 #Ili{
   position: absolute;
   top: 500px;
+  left: 550px;
 }
 
 #iliButton{
   position: absolute;
-  left:90px;
+  left: 640px;
   top:535px;
 }
 
 #iliV{
   position: absolute;
-  top: 600px;
-  left: 5px;
+  top: 573px;
+  left: 70px;
 }
 
 #iliI{
   position: absolute;
-  left:600px;
-  top: 600px;
+  left: 680px;
+  top: 573px;
 }
 
 #iliD{
   position: absolute;
   left:5px;
-  top:920px;
+  top:853px;
+  margin: 50px;
+  margin-right: 180px;
 }
 
 #Pahu{
   position: absolute;
   top: 1000px;
+  left: 560px;
 }
 
 #pahuButton{
   position: absolute;
-  top:1035px;
-  left:80px;
+  top:1032px;
+  left: 640px;
 }
 
 #pahuV{
   position: absolute;
-  top: 1060px;
-  left:5px;
+  top: 1073px;
+  left: 70px;
 }
 
 #pahuI{
   position: absolute;
-  top: 1060px;
-  left:600px;
+  top: 1073px;
+  left: 680px;
 }
 
 #pahuD{
   position: absolute;
-  top: 1390px;
+  top: 1353px;
   left:5px;
+  margin: 50px;
+  margin-right: 160px;
 }
 
 #Ipu{
   position: absolute;
   top: 1500px;
+  left: 580px;
 }
 
 #ipuButton{
   position: absolute;
   top: 1535px;
-  left: 70px;
+  left: 640px;
 }
 
 #ipuV{
   position: absolute;
-  top: 1570px;
-  left:5px;
+  top: 1573px;
+  left: 70px;
 }
 
 #ipuI{
   position: absolute;
-  top: 1570px;
-  left: 600px;
+  top: 1573px;
+  left: 680px;
 }
 
 #ipuD{
   position: absolute;
-  top: 1880px;
+  top: 1853px;
   left:5px;
+  margin: 50px;
+  margin-right: 150px;
 }
