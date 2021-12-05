@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Hawaii's Merrie Monarch Festival</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/lib/p5.js" type="text/javascript" href="js/script2.js"></script>
-    <script src="js/lib/p5.sound.js" type="text/javascript" href="js/script2.js"></script>
-    <div class="box">
-        <p><a href="index.html">Click Here to Play the Instruments Yourself</a></p>
-    </div>
-    <h2 id="Uli">'Uli 'Uli</h2>
-    <h2 id="Ili">'Ili'Ili</h2>
-    <h2 id="Pahu">Pahu</h2>
-    <h2 id="Ipu">Ipu</h2>
-  </head>
-  <body id="page1">
-<!-- pronounciation buttons -->
-<button id="ulisButton"onclick="sayUli()"type="button" name="button"> Pronounciation</button>
-<button id="iliButton" onclick = "sayIli()"type="button" name="button">Pronounciation</button>
-<button id="pahuButton"onclick="sayPahu"type="button" name="button">Pronounciation</button>
-<button id="ipuButton"onclick="sayIpu" type="button" name="button">Pronounciation</button>
-<!-- Videos of the Instrument in Action -->
-<iframe id="uliV" width="560" height="315" src="https://www.youtube.com/embed/OO2zDtzkdwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe id="iliV" width="560" height="315" src="https://www.youtube.com/embed/1yd32K9A2fs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe id="pahuV" width="560" height="315" src="https://www.youtube.com/embed/ASl6exlOn0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe id="ipuV" width="560" height="315" src="https://www.youtube.com/embed/_Xr1Wd17w-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<!-- Descriptions -->
-<p id="uliD">Uli Uli are gourds filled with small shells, seeds, or pebbles. The handle is for grip and to act as a point to attach a counter weight. The counter weight is often made out of kapa, feathers, or both. If feathers are used, then they are often dyed bright colors such as yellow and red. Uli uli are used more often in modern style hula dances. They are meant to be shaken quickly to add excitement to the dances. Most preformers will use two when dancing but there are those who dance with one.</p>
-<p id=iliD>'Ili'Ili are water worn pebbles made out of organic rock. Similar to castanets, dancers will hold two in each hand and strike them together making a clacking sound. 'Ili'ili are often used in hula dances that honor Pele, the goddess of volcanos and fire and creator of the islands. Dancers use these stones to honor her, since she created them. </p>
-<p id="pahuD">Pahus are tall drums. The body of a pahu is usually made of cocunut tree trunk, and the head is usually made of dried shark skin. It was believed the sound of a pahu would alert the gods and goddess of sacred ceremonies and rutals, and the rutulized movements (dancing) would keep their attention. Today, these drums are used toady in a wide variety of dances and have become one of the staple instruments to hula. </p>
-<p id="ipuD">Ipus are gourds hollowed out and used as percussion instruments. These are the most commonly used instruments in hula. Often they are used in dances connected to water, because Hawaiians used them to contain water.</p>
-<!-- Images -->
-<img id="uliI" width = "390" height ="315"src="assets/img-uli.PNG" alt="uli-uli">
-<img id="iliI" width = "390" height ="315"src="assets/ili-img.jpg" alt="ili-ili">
-<img id="pahuI" width="390" height = "315" src="assets/pahu-img.webp" alt="pahu">
-<img id="ipuI"width="390" height="315" src="assets/ipu-img.jpg" alt="Ipu">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hawaii's Merrie Monarch Festival</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/p5.js" type="text/javascript"></script>
+  <script src="js/lib/p5.sound.js" type="text/javascript"></script>
+</head>
+
+<body id="front">
+  <h1>Learn Hawaiian Hula Instruments!</h1>
+  <h3>
+    <a href="page2.html">Click Here to See the Instruments in Action!</a>
+  </h3>
+  <div class="list">
+    <p>Instructions</p>
+    <p>Click the buttons to play the instrument! The instrument will move!</p>
+    <p>Click the button again to pause the instrument's sound!</p>
+  </div>
+  <!-- Add HTML Elements -->
+  <div class="buttons">
+    <button onclick="playUli()" type="button"> Play uli uli!</button>
+    <button onclick="playIli()" type="button"> Play 'ili 'ili!</button>
+    <button onclick="playPahu()" type="button"> Play the Pahu!</button>
+    <button onclick="playIpu()" type="button"> Play the Ipu!</button>
+  </div>
+
+  <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

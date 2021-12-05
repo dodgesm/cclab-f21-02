@@ -40,9 +40,9 @@ function setup() {
   // pahu
   amplitude = new p5.Amplitude();
   //ipu
-  g = new Gourd ();
+  g = new Gourd();
   //uli
-  m = new Shaker ();
+  m = new Shaker();
   //dancer
   d = new Dancer();
   h = new Hips();
@@ -57,15 +57,14 @@ function draw() {
   h.display();
   h.update();
 
-
   // need movement to disappear after sound
   if (ili.currentTime()>0){
     stone.display();
     stone.update();
   } else{
-  if(ili.currentTime()<2){
-    stone.display();
-  }
+    if(ili.currentTime()<2){
+      stone.display();
+    }
   }
 
   drawPahu();
@@ -77,16 +76,12 @@ function draw() {
     if(ipu.currentTime()<2){
       g.display();
     }
-    }
+  }
 
-    if(uli.currentTime()>0){
-      m.display();
-      m.update();
-    } else{
-      if(uli.currentTime()<2){
-        m.display();
-      }
-      }
+  if(uli.isPlaying()){
+    m.update();
+  }
+  m.display();
 }
 
 // ili ili
@@ -107,13 +102,13 @@ class Rock{
     this.speed = 1;
   }
   move() {
-   this.x += random(-this.speed, this.speed);
-   this.y += random(-this.speed, this.speed);
- }
+    this.x += random(-this.speed, this.speed);
+    this.y += random(-this.speed, this.speed);
+  }
   update(){
     this.move();
   }
-    display() {
+  display() {
     push();
     noStroke();
     fill("black");
@@ -121,7 +116,6 @@ class Rock{
     pop();
   }
 }
-
 
 // pahu
 function playPahu(){
@@ -134,28 +128,27 @@ function playPahu(){
 }
 
 function drawPahu(){
-push();
-let level = amplitude.getLevel();
-let dia = map(level, 0.0, 1.0, 0, 500);
+  push();
+  let level = amplitude.getLevel();
+  let dia = map(level, 0.0, 1.0, 0, 500);
 
-noStroke();
-//base of drum
-fill(149,83,50);
-rect(340, 420, 95, 95, 20);
-//top of drum
-fill(252,238,201);
-ellipse(388, 415, dia, 40);
-ellipse(388, 415, 90,40);
-//ropes
-stroke("black");
-strokeWeight(3);
-line(346,504,363,432);
-line(389,511,363,432);
-line(407,432,389,511);
-line(426,505, 407,432);
-pop();
+  noStroke();
+  //base of drum
+  fill(149,83,50);
+  rect(340, 420, 95, 95, 20);
+  //top of drum
+  fill(252,238,201);
+  ellipse(388, 415, dia, 40);
+  ellipse(388, 415, 90,40);
+  //ropes
+  stroke("black");
+  strokeWeight(3);
+  line(346,504,363,432);
+  line(389,511,363,432);
+  line(407,432,389,511);
+  line(426,505, 407,432);
+  pop();
 }
-
 
 //ipu
 function playIpu(){
@@ -177,8 +170,8 @@ class Gourd{
     this.swing();
   }
   swing() {
-  this.angle = sin(frameCount / 10) * 0.02;
-}
+    this.angle = sin(frameCount / 10) * 0.02;
+  }
   display(){
     push();
     noStroke();
@@ -205,31 +198,33 @@ function playUli(){
 }
 
 class Shaker{
-constructor(x,y){
-  this.y = y;
-  this.x = x;
-  this.angle = 0;
-}
-update() {
-  this.swing();
-}
-swing() {
-this.angle = sin(frameCount / 5) * 0.05;
-}
-display(){
-  push();
-  rotate(this.angle);
-  noStroke();
-  fill(178,100,54);
-  ellipse(63,481,60,60);
-  fill(229,205,177);
-  rect(55, 415, 15, 40);
-  fill("red");
-  ellipse(61,400,70,50);
-  fill("yellow");
-  ellipse(61,397, 50,30)
-  pop();
-};
+  constructor(x,y){
+    this.x = x; // let's make this clickable!
+    this.y = y;
+    this.rad = 100;
+    this.angle = 0;
+  }
+  update() {
+    this.swing();
+  }
+  swing() {
+    this.angle = sin(frameCount / 5) * 0.05;
+  }
+  display(){
+    push();
+    //translate(); // ***
+    rotate(this.angle);
+    noStroke();
+    fill(178,100,54);
+    ellipse(63,481,60,60);
+    fill(229,205,177);
+    rect(55, 415, 15, 40);
+    fill("red");
+    ellipse(61,400,70,50);
+    fill("yellow");
+    ellipse(61,397, 50,30)
+    pop();
+  };
 }
 
 // function sayUli(){
@@ -278,13 +273,13 @@ class Dancer{
     this.y += this.ySpd;
   }
   sway() {
-  if (this.x < 410 || this.x > 553) {
-    this.xSpd *= -1;
+    if (this.x < 410 || this.x > 553) {
+      this.xSpd *= -1;
+    }
+    if (this.y < 422 || this.y > 406) {
+      this.ySpd *= -1;
+    }
   }
-  if (this.y < 422 || this.y > 406) {
-    this.ySpd *= -1;
-  }
-}
   update(){
     this.move();
     this.sway();
@@ -329,6 +324,7 @@ class Dancer{
   //   quad(432,379,500,379,523,431,412,431);
   // }
   drawKane(){
+    push();
     //arms
     push();
     fill(this.r,this.g,this.b);
@@ -346,7 +342,7 @@ class Dancer{
     //legs
     ellipse(121, 427, this.dai2, this.dai3);
     ellipse(156,427, this.dai2, this.dai3);
-
+    pop();
   }
 }
 
@@ -368,22 +364,24 @@ class Hips{
     this.y += this.ySpd;
   }
   sway() {
-  if (this.x < 410 || this.x > 553) {
-    this.xSpd *= -1;
+    if (this.x < 410 || this.x > 553) {
+      this.xSpd *= -1;
+    }
+    if (this.y < 422 || this.y > 406) {
+      this.ySpd *= -1;
+    }
   }
-  if (this.y < 422 || this.y > 406) {
-    this.ySpd *= -1;
-  }
-}
   update(){
     this.move();
     this.sway();
   }
   display(){
-      noStroke();
-      fill(this.r2, this.g2, this.b2);
-      quad(432,379,500,379,523,431,412,431);
-      fill(this.color);
-      quad(114,379,166,379,190,431,94,431);
+    push();
+    noStroke();
+    fill(this.r2, this.g2, this.b2);
+    quad(432,379,500,379,523,431,412,431);
+    fill(this.color);
+    quad(114,379,166,379,190,431,94,431);
+    pop();
   }
 }

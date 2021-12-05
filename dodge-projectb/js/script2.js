@@ -4,11 +4,22 @@ let e;
 let u;
 
 function preload() {
-  u = loadSound("assets/uli-p.mp3");
-  l = loadSound("assets/ili-p.mp3");
-  p = loadSound("assets/pahu-p.mp3");
-  e = loadSound("assets/ipu-p.mp3");
+  //u = loadSound("assets/pahu.mp3");
+  u = loadSound("assets/uli-p.m4a");
+  l = loadSound("assets/ili-p.m4a");
+  p = loadSound("assets/pahu-p.m4a");
+  //e = loadSound("assets/ipu-p.m4a"); // ***
+  e = loadSound("assets/pahu-p.m4a");
 }
+
+function setup() {
+  //
+}
+
+function draw() {
+  //
+}
+
 
 function sayUli(){
   u.play();

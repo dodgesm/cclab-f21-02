@@ -18,6 +18,22 @@ h1 {
   left:200px;
 }
 
+.title-box {
+  /* background-color: red; */
+
+  position: absolute;
+  /* left: calc(50% - 350px); */
+  left: 50%;
+  top: 50%;
+  width: 700px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+
+
 #front{
   background-color: rgba(13,154,137,255);
   font-size: 30px;
