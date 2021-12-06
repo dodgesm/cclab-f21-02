@@ -8,8 +8,8 @@ function preload() {
   u = loadSound("assets/uli-p.m4a");
   l = loadSound("assets/ili-p.m4a");
   p = loadSound("assets/pahu-p.m4a");
-  //e = loadSound("assets/ipu-p.m4a"); // ***
-  e = loadSound("assets/pahu-p.m4a");
+  e = loadSound("assets/ipu-p.m4a");
+  // e = loadSound("assets/pahu-p.m4a");
 }
 
 function setup() {

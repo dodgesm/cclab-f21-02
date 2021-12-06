@@ -4,20 +4,32 @@
   <meta charset="utf-8">
   <title>Hawaii's Merrie Monarch Festival</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- <script src="js/lib/p5.js" type="text/javascript"></script> -->
-  <!-- <script src="js/lib/p5.sound.js" type="text/javascript"></script> -->
+  <script src="js/lib/p5.js" type="text/javascript"></script>
+  <script src="js/lib/p5.sound.js" type="text/javascript"></script>
+  <script defer src="js/script.js" type="text/javascript"></script>
+  <style>
+  /* from https://dev.to/gscode/20-css-buttons-4cni */
+    .buttonp1{
+      background-color:transparent;
+      border-radius: 15px;
+      border: 4px double rgb(255,255,255);
+      font-size: 20px;
+    }
+  </style>
 </head>
 
-<body id="front">
+<body id="cover">
   <div class="title-box">
     <h2>Hawaii's Merrie Monarch Festival</h2>
-    <button type="button" name="button">
-      <a href="page1.html">Page1</a>
-    </button>
-    <button type="button" name="button">
-      <a href="page2.html">Page2</a>
-    </button>
-  </div>
+
+      <button class="buttonp1" type="button" name="button">
+        <a href="page1.html">Play Hula Instruments!</a>
+      </button>
+      <button class="buttonp1" type="button" name="button">
+        <a href="page2.html">See Hula Instruments in Action!</a>
+      </button>
+
+    </div>
 </body>
 
 </html>
