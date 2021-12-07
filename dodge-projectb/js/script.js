@@ -10,7 +10,6 @@ function setup() {
   translate(width/2, height/2);
   createCanvas(windowWidth, windowHeight);
   wave.loop();
-  // wave.setVolume(0.5);
   noStroke();
   fill(13,154,137,255);
 }
