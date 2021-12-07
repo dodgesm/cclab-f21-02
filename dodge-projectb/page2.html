@@ -17,9 +17,9 @@
   </div>
   <!-- Link to Instrument Interaction Page -->
   <button type="button" class="music">
-  <span class="words"><a href="page1.html">Play It Yourself!</a></span>
+  <span class="words"><a id="play"href="page1.html">Play It Yourself!</a></span>
   <span class="note">
-    <a href="page2.html">
+    <a id="play" href="page2.html">
     <ion-icon name="musical-notes-outline"></ion-icon></a>
   </span>
   </button>
@@ -29,27 +29,6 @@
   <h2 id="Pahu">Pahu</h2>
   <h2 id="Ipu">Ipu</h2>
 
-  <!-- pronounciation buttons -->
-  <button onclick="sayUli()"type="button" class="uear">
-  <span class="ears">
-  <ion-icon name="ear-outline"></ion-icon>
-  </span>
-  </button>
-  <button onclick="sayIli()"type="button" class="i-ear">
-  <span class="ears">
-  <ion-icon name="ear-outline"></ion-icon>
-  </span>
-  </button>
-  <button onclick="sayPahu()"type="button" class="pear">
-  <span class="pears">
-  <ion-icon name="ear-outline"></ion-icon>
-  </span>
-  </button>
-  <button onclick="sayIpu()"type="button" class="eear">
-  <span class="eears">
-  <ion-icon name="ear-outline"></ion-icon>
-  </span>
-  </button>
   <!-- Videos of the Instrument in Action -->
   <iframe id="uliV" width="560" height="315" src="https://www.youtube.com/embed/OO2zDtzkdwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <iframe id="iliV" width="560" height="315" src="https://www.youtube.com/embed/1yd32K9A2fs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -65,6 +44,28 @@
   <img id="iliI" width = "390" height ="315"src="assets/ili-img.jpg" alt="ili-ili">
   <img id="pahuI" width="390" height = "315" src="assets/pahu-img.webp" alt="pahu">
   <img id="ipuI"width="390" height="315" src="assets/ipu-img.jpg" alt="Ipu">
+
+  <!-- pronounciation buttons -->
+  <button onclick="sayUli()"type="button" class="ear" id="ear-uli">
+  <span class="ears">
+  <ion-icon name="ear-outline"></ion-icon>
+  </span>
+  </button>
+  <button onclick="sayIli()"type="button" class="ear" id="ear-ili">
+  <span class="ears">
+  <ion-icon name="ear-outline"></ion-icon>
+  </span>
+  </button>
+  <button onclick="sayPahu()"type="button" class="ear" id="ear-pahu">
+  <span class="ears">
+  <ion-icon name="ear-outline"></ion-icon>
+  </span>
+  </button>
+  <button onclick="sayIpu()"type="button" class="ear" id="ear-ipu">
+  <span class="ears">
+  <ion-icon name="ear-outline"></ion-icon>
+  </span>
+  </button>
 
 <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 

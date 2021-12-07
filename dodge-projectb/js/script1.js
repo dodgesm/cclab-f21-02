@@ -133,8 +133,12 @@ function playPahu(){
 
 function drawPahu(){
   push();
-  let level = amplitude.getLevel();
-  let dia = map(level, 0.0, 1.0, 0, 500);
+
+  let dia = 1;
+  if (pahu.isPlaying()) {
+    let level = amplitude.getLevel();
+    dia = map(level, 0.0, 1.0, 0, 500);
+  }
 
   noStroke();
   //base of drum

@@ -1,3 +1,20 @@
+a {
+  color:rgba(204,232,243,255);
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+#action-link{
+  color:black;
+  text-decoration:none;
+}
+#action-link:hover{
+  color:white;
+}
+
 html, body {
   margin: 0;
   padding: 0;
