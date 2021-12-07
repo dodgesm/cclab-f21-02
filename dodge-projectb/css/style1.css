@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
-/* was canvas */
+
 canvas{
   display: block;
   position: absolute;

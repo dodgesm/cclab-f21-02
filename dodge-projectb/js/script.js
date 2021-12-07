@@ -9,8 +9,6 @@ function preload (){
 function setup() {
   translate(width/2, height/2);
   createCanvas(windowWidth, windowHeight);
-  // let cnv =createCanvas(windowWidth, windowHeight);
-  // cnv.mouseMoved(userStartAudio);
   wave.loop();
   // wave.setVolume(0.5);
   noStroke();
