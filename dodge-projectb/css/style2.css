@@ -4,135 +4,369 @@
   color:rgb(237,232,232);
 }
 
-.box{
-  position:fixed;
-  left: 1080px;
-  width: 150px;
-  height: 150px;
-  margin: 30px;
-  font-size: 30px;
+.header-box2{
+    position: absolute;
+    left: calc(50% - 90px);
+    top: calc(50% - 250px);
+    width: 1000px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+}
+
+/* link to instrument page */
+.music{
+  position: absolute;
+  transform(-50%, -50%);
+  padding: 5px;
+  left:calc(50% + 380px);
+  top: calc(50% - 235px);
+  display: flex;
+  height: 40px;
+  background: rgba(204,232,243,255);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.music:hover {
+  background: rgb(223,118,89);
+  border: solid;
+  color:white;
+}
+
+.music:active {
+  background: rgb(223,118,89);
+  color:white;
+}
+
+.words,
+.note {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.note {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0);
 }
 
 #Uli{
   position: absolute;
-  left: 530px;
+  transform:(-50%,-50%);
+  left: calc(50% - 200px);
+  top: calc(50%  - 30px);
+  padding: 20px;
+  margin: 20px;
+  font-size: 50px
 }
-#ulisButton{
+
+.uear{
   position: absolute;
-  top: 32px;
-  left: 640px;
+  transform(-50%, -50%);
+  padding: 20px;
+  left:calc(50% + 60px);
+  top: calc(50% + 15px);
+  display: flex;
+  height: 50px;
+  padding: 20px;
+  background: rgba(204,232,243,255);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.uear:hover {
+  background: rgb(223,118,89);
+  border: solid;
+  color:white;
+}
+
+.ears:active {
+  background: rgb(223,118,89);
+  color:white;
+}
+
+.ears{
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.ears{
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0);
 }
 #uliV{
   position:absolute;
-  top: 70px;
-  left: 70px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 70px);
+  padding: 20px;
+  margin: 20px;
 }
 
 #uliD{
   position: absolute;
-  right: 100px;
-  top: 350px;
-  margin: 50px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 470px);
+  padding: 20px;
+  margin: 20px;
+  width: 1000px;
+  height: 350px;
 }
 
 #uliI{
   position: absolute;
-  left: 680px;
-  top: 70px;
+  transform:(-50%,-50%);
+  left: calc(50% + 10px);
+  top: calc(50% + 70px);
+  padding:20px;
+  margin: 20px;
 }
 
 #Ili{
   position: absolute;
-  top: 500px;
-  left: 550px;
+  transform:(-50%,-50%);
+  left: calc(50% - 150px);
+  top: calc(50%  + 650px);
+  padding: 20px;
+  margin: 20px;
+  font-size: 50px;
 }
 
-#iliButton{
+.i-ear{
   position: absolute;
-  left: 640px;
-  top:535px;
+  transform(-50%,-50%);
+  padding: 20px;
+  left:calc(50% + 60px);
+  top:calc(50% + 695px);
+  display:flex;
+  height:50px;
+  padding:20px;
+  background: rgba(204,232,243,255);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.i-ear:hover{
+  background: rgb(223,118,89);
+  border: solid;
+  color:white;
+}
+
+.i-ears:active {
+  background: rgb(223,118,89);
+  color:white;
+}
+
+.i-ears{
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.i-ears{
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0);
 }
 
 #iliV{
   position: absolute;
-  top: 573px;
-  left: 70px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 750px);
+  padding: 20px;
+  margin: 20px;
 }
 
 #iliI{
   position: absolute;
-  left: 680px;
-  top: 573px;
+  transform:(-50%,-50%);
+  left: calc(50% + 10px);
+  top: calc(50% + 750px);
+  padding:20px;
+  margin: 20px;
 }
 
 #iliD{
   position: absolute;
-  left:5px;
-  top:853px;
-  margin: 50px;
-  margin-right: 180px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 1100px);
+  padding: 20px;
+  margin: 20px;
+  width: 1000px;
+  height: 350px;
 }
 
 #Pahu{
   position: absolute;
-  top: 1000px;
-  left: 560px;
+  transform:(-50%,-50%);
+  left: calc(50% - 150px);
+  top: calc(50%  + 1255px);
+  padding: 20px;
+  margin: 20px;
+  font-size: 50px;
 }
 
-#pahuButton{
+.pear{
   position: absolute;
-  top:1032px;
-  left: 640px;
+  transform(-50%, -50%);
+  padding: 20px;
+  left:calc(50% + 60px);
+  top: calc(50% + 1300px);
+  display: flex;
+  height: 50px;
+  padding: 20px;
+  background: rgba(204,232,243,255);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.pear:hover{
+  background: rgb(223,118,89);
+  border: solid;
+  color:white;
+}
+
+.pears:active {
+  background: rgb(223,118,89);
+  color:white;
+}
+
+.pears{
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.pears{
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0);
 }
 
 #pahuV{
   position: absolute;
-  top: 1073px;
-  left: 70px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 1350px);
+  padding: 20px;
+  margin: 20px;
 }
 
 #pahuI{
   position: absolute;
-  top: 1073px;
-  left: 680px;
+  transform:(-50%,-50%);
+  left: calc(50% + 10px);
+  top: calc(50% + 1350px);
+  padding:20px;
+  margin: 20px;
 }
 
 #pahuD{
   position: absolute;
-  top: 1353px;
-  left:5px;
-  margin: 50px;
-  margin-right: 160px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 1750px);
+  padding: 20px;
+  margin: 20px;
+  width: 1000px;
+  height: 350px;
 }
 
 #Ipu{
   position: absolute;
-  top: 1500px;
-  left: 580px;
+  transform:(-50%,-50%);
+  left: calc(50% - 120px);
+  top: calc(50%  + 1900px);
+  padding: 20px;
+  margin: 20px;
+  font-size: 50px;
 }
 
-#ipuButton{
+.eear{
   position: absolute;
-  top: 1535px;
-  left: 640px;
+  transform(-50%, -50%);
+  padding: 20px;
+  left:calc(50% + 60px);
+  top: calc(50% + 1940px);
+  display: flex;
+  height: 50px;
+  padding: 20px;
+  background: rgba(204,232,243,255);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.eear:hover{
+  background: rgb(223,118,89);
+  border: solid;
+  color:white;
+}
+
+.eears:active {
+  background: rgb(223,118,89);
+  color:white;
+}
+
+.eears{
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.eears{
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0);
 }
 
 #ipuV{
   position: absolute;
-  top: 1573px;
-  left: 70px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 2000px);
+  padding: 20px;
+  margin: 20px;
 }
 
 #ipuI{
   position: absolute;
-  top: 1573px;
-  left: 680px;
+  transform:(-50%,-50%);
+  left: calc(50% + 10px);
+  top: calc(50% + 2000px);
+  padding:20px;
+  margin: 20px;
 }
 
 #ipuD{
   position: absolute;
-  top: 1853px;
-  left:5px;
-  margin: 50px;
-  margin-right: 150px;
+  transform:(-50%,-50%);
+  left: calc(50% - 590px);
+  top: calc(50% + 2400px);
+  padding: 20px;
+  margin: 20px;
+  width: 1000px;
+  height: 350px;
 }

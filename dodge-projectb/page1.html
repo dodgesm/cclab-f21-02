@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style1.css">
   <script src="js/lib/p5.js" type="text/javascript"></script>
   <script src="js/lib/p5.sound.js" type="text/javascript"></script>
+  <script defer src="js/script1.js" type="text/javascript"></script>
 
   <style>
   /* from https://dev.to/gscode/20-css-buttons-4cni */
@@ -42,7 +43,7 @@
   <div class="header-box">
     <h1><a href="index.html">Hawaii's Merrie Monarch Festival!</a></h1>
   </div>
-  <!-- Add HTML Elements -->
+
   <div class="buttons">
     <button class="ubutton" onclick="playUli()" type="button"> Play uli uli!</button>
     <button class="ibutton" onclick="playIli()" type="button"> Play 'ili 'ili!</button>
@@ -51,7 +52,7 @@
   </div>
 <!-- icon buttons from https://codepen.io/dcode-software/pen/JjEEPbG-->
   <button type="button" class="iconlink">
-  <a href="page2.html"> See it in Action!</a>
+  <span class="button__text"> <a href="page2.html"> See it in Action!</a></span>
   <span class="button__icon">
     <a href="page2.html">
     <ion-icon name="play-outline"></ion-icon></a>
@@ -65,8 +66,6 @@
 </span>
 </button>
 
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
-  <script src="js/script1.js" type="text/javascript"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>

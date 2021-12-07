@@ -18,7 +18,9 @@ let m;
 let u;
 //Dancers
 let d;
-// let h;
+let s;
+let h;
+let o;
 
 function preload() {
   img = loadImage("assets/poster.PNG");
@@ -26,6 +28,9 @@ function preload() {
   pahu = loadSound("assets/pahu.mp3");
   ipu = loadSound("assets/ipu.mp3");
   uli = loadSound("assets/uli.mp3");
+  f = loadImage("assets/face.PNG");
+  h = loadImage("assets/mhair.PNG");
+  o = loadImage("assets/fhair.PNG");
 }
 
 function setup() {
@@ -40,7 +45,7 @@ function setup() {
   //uli
   m = new Shaker();
   //dancer
-  d = new Dancer();
+  d = new Dancer(620,515);
   // h = new Hips();
 }
 
@@ -48,25 +53,37 @@ function draw() {
   background(img);
 
   //dancer
-  // d.update();
   d.display();
-  // h.display();
-  // h.update();
+  // kane
+  image(f, 210,485);
+  image(h, 203, 467);
+  // wahine
+  image(f,635, 485);
+  image(o,617,460);
+  f.resize(50,30);
+  h.resize(65,30);
+  o.resize(80,80);
 
   if (ili.isPlaying()){
     stone.update();
+    d.update();
   }
     stone.display();
 
   drawPahu();
+  if(pahu.isPlaying()){
+      d.update();
+  }
 
   if(ipu.isPlaying()){
     g.update();
+    d.update();
   }
     g.display();
 
   if(uli.isPlaying()){
     m.update();
+    d.update();
   }
   m.display();
 }
@@ -135,7 +152,7 @@ function drawPahu(){
   line(538,608,558,685);
   line(558,685,570,608);
   line(570,608,589,684);
-  line(589,684,596,600)
+  line(589,684,596,600);
   pop();
 }
 
@@ -254,29 +271,20 @@ class Dancer{
     this.g3=80;
     this.b3=153;
     //movements
-    this.xSpd = random(-3, 3);
-    this.ySpd = random(-3, 3);
+    this.rad = 100;
+    this.angle = 0;
   }
-  move(){
-    this.x += this.xSpd;
-    this.y += this.ySpd;
-  }
-  sway() {
-    if (this.x < 410 || this.x > 553) {
-      this.xSpd *= -1;
-    }
-    if (this.y < 422 || this.y > 406) {
-      this.ySpd *= -1;
-    }
+  swing() {
+    this.angle = sin(frameCount / 5) * 0.01;
   }
   update(){
-    this.move();
-    this.sway();
+    this.swing();
   }
   display(){
     push();
     this.drawWahine();
     this.drawKane();
+    rotate(this.angle);
     this.drawHips();
     pop();
   }
@@ -287,94 +295,60 @@ class Dancer{
     push();
     ellipseMode(CORNER);
     fill(this.r,this.g,this.b);
-    ellipse(495, 319, this.dai2, this.dai3);
-    ellipse(410,319, this.dai2, this.dai3);
+    ellipse(this.x + 70, this.y + 10, this.dai2, this.dai3);
+    ellipse(this.x - 19, this.y +10, this.dai2, this.dai3);
     pop();
     //top
     fill(this.r2, this.g2, this.b2);
-    rect(427, 310, 80, 70);
+    rect(this.x, this.y,80,70);
+    // rect(427, 310, 80, 70);
     //legs
     fill(this.r,this.g,this.b);
-    ellipse(455, 427, this.dai2, this.dai3);
-    ellipse(480,427, this.dai2, this.dai3);
+    ellipse(this.x + 28, this.y + 117, this.dai2, this.dai3);
+    ellipse(this.x + 53,this.y + 117,this.dai2,this.dai3);
     //head
     fill(this.r,this.g,this.b);
-    ellipse(466, 288, this.dai, this.dai);
-    fill(72,202,0);
-    ellipse(466,267, 70,20);
+    ellipse(this.x + 39, this.y - 22, this.dai,this.dai);
+    // fill(72,202,0);
+    // ellipse(this.x + 39, this.y - 43, 70, 20);
     pop();
   }
   drawKane(){
     push();
     //arms
     push();
+    noStroke();
     fill(this.r,this.g,this.b);
     ellipseMode(CORNER);
     fill(this.r,this.g,this.b);
-    ellipse(160,319, this.dai2, this.dai3);
-    ellipse(90,319, this.dai2, this.dai3);
+    ellipse(this.x - 355, this.y + 7, this.dai2, this.dai3);
+    ellipse(this.x - 445, this.y + 7, this.dai2, this.dai3);
     pop();
     //top
+    noStroke();
     fill(this.r3, this.g3, this.b3);
-    rect(100, 310, 80, 70);
-    // head
+    rect(this.x - 425,this.y - 4,80,70);
+    // legs
     fill(this.r,this.g,this.b);
-    ellipse(138, 288, this.dai, this.dai);
-    //legs
-    ellipse(121, 427, this.dai2, this.dai3);
-    ellipse(156,427, this.dai2, this.dai3);
+    ellipse(this.x - 370,this.y + 137,this.dai2,this.dai3);
+    ellipse(this.x - 400,this.y + 137, this.dai2, this.dai3);
+    //head
+    ellipse(this.x - 385,this.y - 22, this.dai,this.dai);
+    fill(72,202,0);
+    ellipse(this.x - 385, this.y - 45, 70,20);
     pop();
   }
   drawHips(){
     push();
     noStroke();
     fill(this.r2, this.g2, this.b2);
-    quad(432,379,500,379,523,431,412,431);
+    quad(this.x + 95, this.y + 136, this.x - 10, this.y + 136, this.x + 15, this.y + 60, this.x + 65 , this.y + 60);
     fill(this.color);
-    quad(114,379,166,379,190,431,94,431);
+    quad(this.x - 450,this.y + 136, this.x - 320,this.y + 136, this.x - 350,this.y + 60, this.x - 420,this.y + 60);
     pop();
   }
 }
 
-// class Hips{
-//   constructor(x,y){
-//     this.x=x;
-//     this.y=y;
-//     this.xSpd = random(-3, 3);
-//     this.ySpd = random(-3, 3);
-//     //red
-//     this.r2 = 250;
-//     this.g2 = 45;
-//     this.b2 = 51;
-//     //green
-//     this.color = "green";
-//   }
-//   move(){
-//     this.x += this.xSpd;
-//     this.y += this.ySpd;
-//   }
-//   sway() {
-//     if (this.x < 410 || this.x > 553) {
-//       this.xSpd *= -1;
-//     }
-//     if (this.y < 422 || this.y > 406) {
-//       this.ySpd *= -1;
-//     }
-//   }
-//   update(){
-//     this.move();
-//     this.sway();
-//   }
-//   display(){
-//     push();
-//     noStroke();
-//     fill(this.r2, this.g2, this.b2);
-//     quad(432,379,500,379,523,431,412,431);
-//     fill(this.color);
-//     quad(114,379,166,379,190,431,94,431);
-//     pop();
-//   }
-// }
 
 function addInstruct(){
  alert("click the buttons at the bottom to play and pause instruments");
