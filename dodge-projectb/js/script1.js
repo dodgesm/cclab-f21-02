@@ -41,9 +41,9 @@ function setup() {
   // pahu
   amplitude = new p5.Amplitude();
   //ipu
-  g = new Gourd();
+  g = new Gourd(744,591);
   //uli
-  m = new Shaker();
+  m = new Shaker(148,662);
   //dancer
   d = new Dancer(620,515);
   // h = new Hips();
@@ -183,16 +183,15 @@ class Gourd{
     noStroke();
     fill(165,85,31);
     rotate(this.angle);
-    ellipse(744,645,60,90);
-    ellipse(744,591,65,40);
-    // ellipse(523,459,60,90);
-    // ellipse(523,405,65,40);
+    // bottom and top
+    ellipse(this.x,this.y + 54,60,90);
+    ellipse(this.x,this.y,65,40);
+    // hole
     fill("black");
-    ellipse(744, 588,30,20);
-    // ellipse(523,399, 30,20);
+    ellipse(this.x, this.y - 3,30,20);
+    // leaf edge
     fill(72,202,0);
-    ellipse(744,610,45,10);
-    // ellipse(523,421, 45, 10);
+    ellipse(this.x,this.y + 19,45,10);
     pop();
   }
 }
@@ -225,14 +224,17 @@ class Shaker{
     //translate(); // ***
     rotate(this.angle);
     noStroke();
+    // gourd
     fill(178,100,54);
-    ellipse(148,662,60,60);
+    ellipse(this.x,this.y,60,60);
+    // handel
     fill(229,205,177);
-    rect(140,596,15,40);
+    rect(this.x - 8,this.y - 60,15,40);
+    // top
     fill("red");
-    ellipse(148,581,70,50);
+    ellipse(this.x,this.y - 81,70,50);
     fill("yellow");
-    ellipse(148,578,50,30);
+    ellipse(this.x,this.y - 84,50,30);
     pop();
   };
 }
