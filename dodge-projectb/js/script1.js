@@ -28,9 +28,9 @@ function preload() {
   pahu = loadSound("assets/pahu.mp3");
   ipu = loadSound("assets/ipu.mp3");
   uli = loadSound("assets/uli.mp3");
-  f = loadImage("assets/face.PNG");
-  h = loadImage("assets/mhair.PNG");
-  o = loadImage("assets/fhair.PNG");
+  f = loadImage("assets/face.png");
+  h = loadImage("assets/mhair.png");
+  o = loadImage("assets/fhair.png");
 }
 
 function setup() {
