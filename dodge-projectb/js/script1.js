@@ -303,7 +303,6 @@ class Dancer{
     //top
     fill(this.r2, this.g2, this.b2);
     rect(this.x, this.y,80,70);
-    // rect(427, 310, 80, 70);
     //legs
     fill(this.r,this.g,this.b);
     ellipse(this.x + 28, this.y + 117, this.dai2, this.dai3);
@@ -311,8 +310,13 @@ class Dancer{
     //head
     fill(this.r,this.g,this.b);
     ellipse(this.x + 39, this.y - 22, this.dai,this.dai);
+    // face plan b
+    // fill("black");
+    // ellipse(670, 492, 10, 10);
+    // ellipse(650, 492, 10,10);
+    // arc(660, 508, 20, 20, 0, PI);
     // fill(72,202,0);
-    // ellipse(this.x + 39, this.y - 43, 70, 20);
+    // ellipse(658, 470, 70, 20);
     pop();
   }
   drawKane(){
@@ -338,6 +342,11 @@ class Dancer{
     ellipse(this.x - 385,this.y - 22, this.dai,this.dai);
     fill(72,202,0);
     ellipse(this.x - 385, this.y - 45, 70,20);
+    // face plan b
+    // fill("black");
+    // ellipse(225,493,10,10);
+    // ellipse(241,493,10,10);
+    // arc(234, 508, 20, 20, 0, PI);
     pop();
   }
   drawHips(){
